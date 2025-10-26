@@ -12,7 +12,7 @@
 #include <vector>
 using namespace std;
 
-int searchRow (vector<vector<int>> matrix , int m ,int n ,int target) {
+int searchRow (vector<vector<int>> matrix , int m ,int n ,int target) { // Time Complexity : O( log(m) )
     int st = 0 , end = m - 1 ; // To Search in Row;
 
     while ( st <= end ) {
@@ -29,7 +29,7 @@ int searchRow (vector<vector<int>> matrix , int m ,int n ,int target) {
     return 0 ;
 }
 
-bool searchMatrix (vector<vector<int>> matrix , int m , int n , int target ) {
+bool searchMatrix (vector<vector<int>> matrix , int m , int n , int target ) { //Time Complexity :O( log(m) + log(n) ) = O (log(m*n) )
     int st = 0 , end = n - 1 ; // To Search in Column;
 
     int Row = searchRow (matrix , m , n , target ) ; // Gives Row number where target lies;
